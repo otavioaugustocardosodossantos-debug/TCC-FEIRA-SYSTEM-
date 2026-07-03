@@ -1,28 +1,22 @@
 # TCC-FEIRA-SYSTEM-
 
----
+-----
 
-# 📌 SOBRE O PROJETO
-
-**Nome:** Feira System
-**Tipo:** Sistema Web de Gestão
-**Área:** Tecnologia da Informação
-
-O sistema será voltado para **feirantes, ambulantes e pequenos comerciantes**, com foco em **gestão interna**.
+📌 SOBRE O PROJETO
+Nome: Feira System
+Tipo: Sistema Web de Gestão
+Área: Tecnologia da Informação
+O sistema será voltado para feirantes, ambulantes e pequenos comerciantes, com foco em gestão interna.
 
 ⚠️ REGRAS IMPORTANTES:
 
-* NÃO é e-commerce
-* NÃO realiza vendas online
-* NÃO possui cadastro de clientes
-* É um sistema administrativo interno
+- NÃO é e-commerce
+- NÃO realiza vendas online
+- NÃO possui cadastro de clientes
+- É um sistema administrativo interno
 
----
-
-# 🎯 OBJETIVO PRINCIPAL
-
+🎯 OBJETIVO PRINCIPAL
 Permitir controle completo de:
-
 * Produtos
 * Estoque
 * Vendas
@@ -32,28 +26,19 @@ Permitir controle completo de:
 * Relatórios financeiros
 * Indicadores de desempenho
 
----
-
-# 📊 JUSTIFICATIVA
-
+📊 JUSTIFICATIVA
 O sistema resolve problemas reais como:
+- Controle manual ineficiente
+- Perda de dados
+- Erros de cálculo
+- Falta de controle financeiro
+- Dificuldade de tomada de decisão
 
-* Controle manual ineficiente
-* Perda de dados
-* Erros de cálculo
-* Falta de controle financeiro
-* Dificuldade de tomada de decisão
-
----
-
-# 🎯 OBJETIVOS
-
-## Geral:
-
+🎯 OBJETIVOS
+Geral:
 Desenvolver um sistema web completo para gestão de feirantes.
 
-## Específicos:
-
+Específicos:
 * Levantamento de requisitos
 * Interface intuitiva
 * Autenticação segura
@@ -65,94 +50,78 @@ Desenvolver um sistema web completo para gestão de feirantes.
 * Relatórios
 * Segurança dos dados
 
----
+🧱 STACK TECNOLÓGICA
+Backend:
+Node.js
+Express
+PostgreSQL
+JWT
+bcrypt
 
-# 🧱 STACK TECNOLÓGICA
+Frontend:
+JavaScript
+HTML
+CSS
 
-## Backend:
-
-* Node.js
-* Express
-* PostgreSQL
-* JWT
-* bcrypt
-
-## Frontend:
-
-* JavaScript
-* HTML
-* CSS
-
----
-
-# 🗄️ MODELAGEM DO BANCO
+🗄️ MODELAGEM DO BANCO
 
 Tabelas:
 
-## usuarios
+usuarios:
+id
+nome
+email
+senha_hash
+nome_banca
+moeda
+meta_vendas
+meta_lucro
+modo_escuro
+created_at
 
-* id
-* nome
-* email
-* senha_hash
-* nome_banca
-* moeda
-* meta_vendas
-* meta_lucro
-* modo_escuro
-* created_at
+produtos:
+id
+usuario_id
+nome
+categoria
+tipo_venda
+preco_custo
+preco_venda
+quantidade
+ativo
+created_at
 
-## produtos
+vendas
+id
+usuario_id
+total
+lucro_total
+forma_pagamento
+status
+created_at
 
-* id
-* usuario_id
-* nome
-* categoria
-* tipo_venda
-* preco_custo
-* preco_venda
-* quantidade
-* ativo
-* created_at
+itens_venda
+id
+venda_id
+produto_id
+quantidade
+preco_unitario
+custo_unitario
+subtotal
+lucro_item
 
-## vendas
+desperdicios
+id
+usuario_id
+produto_id
+quantidade
+motivo
+valor_perda
+data_registro
+created_at
 
-* id
-* usuario_id
-* total
-* lucro_total
-* forma_pagamento
-* status
-* created_at
-
-## itens_venda
-
-* id
-* venda_id
-* produto_id
-* quantidade
-* preco_unitario
-* custo_unitario
-* subtotal
-* lucro_item
-
-## desperdicios
-
-* id
-* usuario_id
-* produto_id
-* quantidade
-* motivo
-* valor_perda
-* data_registro
-* created_at
-
----
-
-# ⚙️ FUNCIONALIDADES
-
-## Autenticação
-
+⚙️ FUNCIONALIDADES
+Autenticação:
 * Cadastro
 * Login
 * JWT
@@ -160,101 +129,90 @@ Tabelas:
 * Recuperação de senha
 * Proteção de rotas
 
-## Produtos
-
+Produtos:
 * CRUD completo
 * Filtros e busca
 * Controle de estoque
 
-## Estoque
-
+Estoque:
 * Entrada e saída automática
 * Alerta de estoque baixo
 
-## Vendas
-
+Vendas:
 * Registro com múltiplos itens
 * Cálculo automático
 * Baixa no estoque
 * Cancelamento com reversão
 
-## Desperdícios
-
+Desperdícios:
 * Registro de perdas
 * Cálculo de prejuízo
 * Histórico
 
-## Dashboard
-
+Dashboard:
+* gráficos 
 * Vendas (dia/mês)
 * Lucro
 * Metas
 * Produtos mais vendidos
 
-## Relatórios
-
+Relatórios:
 * PDF e Word
 * Receita
 * Custos
 * Lucro
 * Relatórios por período
 
----
-
-# 📏 REGRAS DE NEGÓCIO
-
+📏 REGRAS DE NEGÓCIO
 * Toda venda deve atualizar estoque e lucro
 * Cancelamento deve restaurar estoque
 * Desperdício reduz estoque e gera prejuízo
 * Todos os dados são por usuário (multi-tenant)
 * Usuário só acessa seus dados
 
----
-
-# 🏗️ ARQUITETURA
-
+🏗️ ARQUITETURA
 Utilizar:
+ * Clean Architecture
+ * MVC
+ * SOLID
+ * Clean Code
+ * Repository Pattern
+ * Service Layer
 
-* Clean Architecture
-* MVC
-* SOLID
-* Clean Code
-* Repository Pattern
-* Service Layer
+📁 ESTRUTURA DO BACKEND
+Pasta do backend:
+src
+routes
+controllers
+services
+repositories
+middlewares
+models
+database
+config
+utils
+types
 
----
 
-# 📁 ESTRUTURA DO BACKEND
+🪜 ORDEM DE DESENVOLVIMENTO
+ - Levantamento de requisitos
+ - Arquitetura
+ - Estrutura de pastas
+ - Banco de dados
+ - Node.js setup
+ - TypeScript
+ - Express
+ - Autenticação
+ - CRUD produtos
+ - Estoque
+ - Vendas
+ - Desperdícios
+ - Dashboard
+ - Relatórios
+ - Testes
+ - Deploy
 
-* src
-* routes
-* controllers
-* services
-* repositories
-* middlewares
-* models
-* database
-* config
-* utils
-* types
 
----
 
- # ORDEM DE DESENVOLVIMENTO
- 
-1. Levantamento de requisitos
-2. Arquitetura
-3. Estrutura de pastas
-4. Banco de dados
-5. Node.js setup
-6. TypeScript
-7. Express
-8. Autenticação
-9. CRUD produtos
-10. Estoque
-11. Vendas
-12. Desperdícios
-13. Dashboard
-14. Relatórios
 15. Testes
 16. Deploy
