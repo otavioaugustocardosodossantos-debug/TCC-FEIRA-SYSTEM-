@@ -4,8 +4,11 @@
 
 📌 SOBRE O PROJETO
 Nome: Feira System
+
 Tipo: Sistema Web de Gestão
+
 Área: Tecnologia da Informação
+
 O sistema será voltado para feirantes, ambulantes e pequenos comerciantes, com foco em gestão interna.
 
 ⚠️ REGRAS IMPORTANTES:
