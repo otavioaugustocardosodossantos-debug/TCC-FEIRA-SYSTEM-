@@ -1,0 +1,2526 @@
+EXPLICAÇÕES SOBRE TODAS AS COISAS DO PROJETO FEIRA SYSTEM 
+
+ETAPA 1 — Levantamento de Requisitos
+
+O que é o Levantamento de Requisitos?
+
+Antes de escrever qualquer linha de código, uma empresa precisa entender exatamente o problema que deseja resolver.
+
+Esse processo recebe o nome de Levantamento de Requisitos.
+
+É uma das fases mais importantes da Engenharia de Software.
+
+Podemos dizer que ele responde perguntas como:
+- O que o sistema fará?
+- Quem utilizará o sistema?
+- Quais problemas ele resolve?
+- Quais informações deverão ser armazenadas?
+- Como o usuário utilizará o sistema?
+
+Sem essa etapa é muito comum acontecer:
+
+- funcionalidades desnecessárias;
+- retrabalho;
+- aumento de custos;
+- atrasos;
+- falhas de segurança;
+- banco de dados mal planejado.
+
+É exatamente por isso que empresas como Google, Microsoft e grandes consultorias investem muito tempo nessa fase antes do desenvolvimento.
+
+Objetivo do Feira System:
+- O Feira System é um sistema web desenvolvido para auxiliar feirantes, ambulantes e pequenos comerciantes na gestão diária do seu negócio.
+- Seu principal objetivo é centralizar todas as informações administrativas em um único ambiente.
+- O sistema não possui clientes cadastrados e não realiza vendas online.
+- Ele funciona como um ERP simplificado.
+
+Problema encontrado:
+- Após analisar o cenário dos pequenos comerciantes, identificamos diversos problemas recorrentes.
+- Controle de estoque manual
+- Grande parte dos feirantes utiliza:
+    -caderno
+    -planilhas
+    -memória
+Isso provoca erros frequentes.
+
+Exemplo:
+
+O comerciante acredita possuir:
+
+100 bananas
+
+Na realidade possui apenas:
+
+63
+
+Consequência:
+
+Perda de vendas.
+
+
+Falta de controle financeiro
+
+Muitos comerciantes sabem quanto venderam.
+
+Mas não sabem:
+ - quanto lucraram
+ - quanto gastaram
+ - quanto perderam
+
+Exemplo:
+
+Venda do dia:
+
+R$ 850
+
+Mas:
+
+Compras:
+R$ 520
+
+Desperdício:
+R$ 110
+
+Lucro verdadeiro:
+
+R$ 220
+
+Sem um sistema, esse cálculo geralmente nunca é feito.
+
+Desperdícios
+
+Produtos perecíveis possuem curta validade.
+
+Frutas.
+
+Verduras.
+
+Legumes.
+
+Carnes.
+
+Sem controle de perdas o comerciante acredita que teve lucro, quando na verdade parte do estoque foi descartada.
+
+Decisão baseada em "achismo"
+
+Sem indicadores o comerciante não sabe:
+ - qual produto vende mais;
+ - qual dá maior lucro;
+ - qual gera mais prejuízo;
+ - quais dias vendem mais;
+ - quando comprar estoque.
+
+Solução proposta
+
+O Feira System resolverá esses problemas através de módulos especializados.
+
+Cada módulo possui uma responsabilidade específica.
+
+Módulo de Autenticação
+
+Responsável por:
+ - Cadastro
+ - Login
+ - Segurança
+ - Recuperação de senha
+ - Controle de acesso
+ - Módulo de Produtos
+
+Responsável por:
+
+cadastrar produtos;
+editar produtos;
+excluir produtos;
+pesquisar produtos;
+controlar preços.
+Módulo de Estoque
+
+Responsável por:
+
+quantidade disponível;
+entrada de mercadorias;
+saída automática nas vendas;
+alerta de estoque baixo.
+Módulo de Vendas
+
+Responsável por:
+
+registrar vendas;
+calcular lucro;
+calcular total;
+atualizar estoque;
+cancelar vendas.
+Módulo de Desperdícios
+
+Responsável por registrar perdas.
+
+Exemplo:
+
+10 tomates estragaram.
+
+Quantidade perdida:
+
+10
+
+Valor perdido:
+
+R$ 42
+
+O sistema desconta automaticamente do estoque.
+
+Dashboard
+
+O painel gerencial mostrará indicadores importantes.
+
+Exemplo:
+
+Hoje:
+
+Receita
+
+Lucro
+
+Produtos vendidos
+
+Produtos mais vendidos
+
+Estoque baixo
+
+Meta atingida
+
+Relatórios
+
+Gerar:
+
+PDF
+
+Word
+
+Relatórios por período
+
+Relatórios financeiros
+
+Relatórios de perdas
+
+
+Stakeholders
+
+Stakeholders são todas as pessoas envolvidas no projeto.
+
+No Feira System temos:
+
+Usuário principal
+
+Feirante.
+
+É quem utilizará diariamente o sistema.
+
+Desenvolvedor
+
+Responsável pela manutenção.
+
+Instituição de Ensino
+
+Avaliará o projeto como TCC.
+
+Orientador
+
+Validará as decisões técnicas.
+
+Persona
+
+Uma persona representa o usuário ideal.
+
+Persona Principal
+
+Nome:
+
+José
+
+Idade:
+
+46 anos
+
+Profissão:
+
+Feirante
+
+Características:
+
+- pouco conhecimento em informática;
+- utiliza celular diariamente;
+- deseja rapidez;
+- prefere telas simples;
+- precisa de informações claras.
+
+Essa persona influencia diretamente o design do sistema.
+
+Por exemplo:
+
+Ao invés de dezenas de menus, utilizaremos poucos módulos bem organizados.
+
+Requisitos Funcionais (RF)
+
+Os requisitos funcionais descrevem o que o sistema deve fazer.
+
+RF01
+
+Cadastrar usuário.
+
+RF02
+
+Realizar login.
+
+RF03
+
+Recuperar senha.
+
+RF04
+
+Cadastrar produtos.
+
+RF05
+
+Editar produtos.
+
+RF06
+
+Excluir produtos.
+
+RF07
+
+Pesquisar produtos.
+
+RF08
+
+Registrar vendas.
+
+RF09
+
+Atualizar estoque automaticamente.
+
+RF10
+
+Registrar desperdícios.
+
+RF11
+
+Calcular lucro automaticamente.
+
+RF12
+
+Gerar relatórios.
+
+RF13
+
+Gerar dashboard.
+
+RF14
+
+Cadastrar metas.
+
+RF15
+
+Cancelar venda restaurando o estoque.
+
+RF16
+
+Permitir alterar configurações do usuário.
+
+RF17
+
+Exibir alertas de estoque baixo.
+
+Requisitos Não Funcionais (RNF)
+
+Os requisitos não funcionais definem como o sistema deve funcionar.
+
+RNF01
+
+Sistema responsivo.
+
+RNF02
+
+Interface intuitiva.
+
+RNF03
+
+Tempo de resposta inferior a 2 segundos para operações comuns.
+
+RNF04
+
+Senhas criptografadas.
+
+RNF05
+
+Autenticação via JWT.
+
+RNF06
+
+API REST.
+
+RNF07
+
+Banco PostgreSQL.
+
+RNF08
+
+Código em TypeScript.
+
+RNF09
+
+Arquitetura escalável.
+
+RNF10
+
+Compatível com navegadores modernos.
+
+Regras de Negócio (RN)
+
+As regras de negócio definem o comportamento do sistema.
+
+RN01
+
+Cada usuário acessa apenas seus próprios dados.
+
+RN02
+
+Toda venda reduz o estoque automaticamente.
+
+RN03
+
+Uma venda não pode ser registrada caso algum item não possua estoque suficiente.
+
+RN04
+
+Ao cancelar uma venda, o estoque deve ser restaurado.
+
+RN05
+
+O lucro de cada item será calculado por:
+
+Lucro = (Preço de Venda - Preço de Custo) × Quantidade
+RN06
+
+Todo desperdício reduz o estoque.
+
+RN07
+
+O valor perdido será registrado para análises financeiras.
+
+RN08
+
+Produtos inativos não poderão ser vendidos.
+
+RN09
+
+O sistema impedirá valores negativos para estoque.
+
+RN10
+
+Apenas usuários autenticados poderão acessar a API.
+
+Casos de Uso Principais
+
+Os casos de uso descrevem as interações entre o usuário e o sistema.
+
+Código	Caso de Uso	Objetivo
+UC01	Cadastrar usuário	Criar uma nova conta
+UC02	Autenticar usuário	Permitir acesso ao sistema
+UC03	Gerenciar produtos	Manter o catálogo atualizado
+UC04	Registrar venda	Registrar uma venda e atualizar o estoque
+UC05	Registrar desperdício	Controlar perdas de produtos
+UC06	Consultar dashboard	Visualizar indicadores de desempenho
+UC07	Gerar relatórios	Apoiar a tomada de decisão
+UC08	Configurar metas	Definir objetivos de vendas e lucro
+
+Riscos do Projeto
+
+Todo projeto possui riscos que devem ser considerados desde o início.
+
+Risco	Impacto	Mitigação
+Perda de dados	Alto	Backups periódicos e banco confiável
+Acesso indevido	Alto	JWT, bcrypt, validação de permissões
+Erros de estoque	Alto	Transações no banco de dados e validações de negócio
+Crescimento do sistema	Médio	Arquitetura em camadas (MVC + Services + Repositories)
+Manutenção difícil	Médio	Clean Code, SOLID e documentação
+
+Tecnologias Escolhidas e Justificativa
+Tecnologia	Justificativa
+Node.js	Alto desempenho para APIs e grande ecossistema
+Express	Framework leve e amplamente utilizado
+TypeScript	Tipagem estática, maior segurança e melhor manutenção
+PostgreSQL	Banco relacional robusto e adequado para dados transacionais
+JWT	Autenticação stateless para APIs REST
+bcrypt	Armazenamento seguro de senhas
+HTML, CSS e JavaScript	Base sólida para um frontend leve e compatível com o escopo do TCC
+
+Resultado Esperado desta Etapa
+
+Ao concluir o levantamento de requisitos, teremos uma visão clara do sistema antes da implementação. Essa documentação servirá de base para:
+
+modelagem do banco de dados;
+definição da arquitetura;
+implementação das regras de negócio;
+desenvolvimento da API REST;
+construção do frontend;
+documentação do TCC.
+
+Essa etapa reduz riscos, evita retrabalho e garante que as próximas decisões técnicas estejam alinhadas aos objetivos do projeto.
+
+
+-------------
+
+
+
+ETAPA 2 — Arquitetura do Sistema
+
+Agora que sabemos o que o sistema deve fazer, vamos definir como ele será construído.
+
+Objetivo desta etapa: criar uma arquitetura organizada, escalável e de fácil manutenção, seguindo padrões utilizados no mercado. Assim, o Feira System poderá crescer sem que o código se torne difícil de entender ou modificar.
+
+O que é Arquitetura de Software?
+
+A arquitetura de software é a forma como um sistema é estruturado.
+
+Ela define:
+
+como os componentes se comunicam;
+onde cada responsabilidade ficará;
+como o código será organizado;
+como facilitar testes, manutenção e evolução.
+
+Pense na arquitetura como a planta de uma casa: antes de construir, é preciso saber onde ficarão os cômodos, a parte elétrica e a hidráulica.
+
+Por que usar uma arquitetura bem definida?
+
+Sem arquitetura, é comum encontrar problemas como:
+
+código duplicado;
+regras de negócio espalhadas pelo projeto;
+dificuldade para localizar erros;
+baixa escalabilidade;
+manutenção cara.
+
+Com uma boa arquitetura, conseguimos:
+
+separar responsabilidades;
+reutilizar código;
+facilitar testes;
+reduzir bugs;
+permitir que outros desenvolvedores entendam o projeto rapidamente.
+Arquiteturas que utilizaremos
+
+O Feira System combinará alguns padrões consolidados.
+
+1. MVC (Model–View–Controller)
+
+O MVC organiza o sistema em três camadas principais.
+
+Model
+
+Responsável pelos dados.
+
+Exemplos:
+
+Produto
+Venda
+Usuário
+Desperdício
+
+Funções:
+
+representar entidades;
+definir tipos;
+interagir com o banco (indiretamente, por meio dos repositórios).
+View
+
+No nosso projeto, a View é o frontend.
+
+Tecnologias:
+
+HTML
+CSS
+JavaScript
+
+Ela apenas apresenta informações e envia requisições para a API.
+
+Controller
+
+É a porta de entrada da API.
+
+Responsabilidades:
+
+receber a requisição;
+validar dados básicos;
+chamar o Service;
+devolver a resposta ao frontend.
+
+O Controller não deve conter regras de negócio complexas.
+
+2. Service Layer
+
+Esta camada concentra toda a lógica do sistema.
+
+Exemplos:
+
+calcular lucro;
+verificar estoque;
+cancelar venda;
+gerar relatórios;
+validar regras de negócio.
+
+Se amanhã o frontend mudar (por exemplo, para um aplicativo móvel), a lógica continua a mesma, pois está centralizada nos Services.
+
+3. Repository Pattern
+
+Os repositórios isolam o acesso ao banco de dados.
+
+Eles são responsáveis por operações como:
+
+buscar produtos;
+salvar vendas;
+atualizar estoque;
+remover registros.
+
+Isso evita que Controllers ou Services conheçam detalhes do banco de dados.
+
+4. Clean Architecture
+
+A Clean Architecture organiza o sistema para que as regras de negócio não dependam de tecnologias específicas.
+
+Isso significa que, no futuro, poderíamos trocar o PostgreSQL por outro banco sem reescrever toda a lógica de negócio.
+
+Princípios:
+
+baixo acoplamento;
+alta coesão;
+independência de frameworks;
+facilidade de testes.
+Fluxo de uma Requisição
+
+Quando um usuário realiza uma ação, a informação percorre um caminho bem definido.
+
+Usuário
+   │
+   ▼
+Frontend (HTML/CSS/JS)
+   │
+   ▼
+Express Router
+   │
+   ▼
+Controller
+   │
+   ▼
+Service
+   │
+   ▼
+Repository
+   │
+   ▼
+PostgreSQL
+   │
+   ▲
+Repository
+   │
+Service
+   │
+Controller
+   │
+Frontend
+   │
+Usuário
+Exemplo Prático
+
+Imagine que o usuário deseja vender cinco maçãs.
+
+Passo 1
+
+O frontend envia:
+
+POST /vendas
+Passo 2
+
+A rota identifica:
+
+/vendas
+
+e chama:
+
+VendaController
+Passo 3
+
+O Controller:
+
+verifica se os dados obrigatórios foram enviados;
+chama:
+VendaService
+Passo 4
+
+O Service:
+
+verifica o estoque;
+calcula subtotal;
+calcula lucro;
+atualiza estoque;
+registra venda.
+Passo 5
+
+O Repository:
+
+Executa os comandos SQL.
+
+Passo 6
+
+O banco grava tudo.
+
+Passo 7
+
+A resposta retorna:
+
+{
+  "mensagem": "Venda registrada com sucesso"
+}
+Organização dos Módulos
+
+Cada módulo terá responsabilidades bem definidas.
+
+Autenticação
+
+Responsável por:
+
+cadastro;
+login;
+JWT;
+recuperação de senha;
+alteração de senha.
+Usuário
+
+Gerencia:
+
+metas;
+moeda;
+nome da banca;
+preferências;
+modo escuro.
+Produtos
+
+Gerencia:
+
+cadastro;
+edição;
+exclusão;
+filtros;
+estoque inicial.
+Estoque
+
+Controla:
+
+entradas;
+saídas;
+estoque baixo;
+movimentações automáticas.
+Vendas
+
+Responsável por:
+
+registrar vendas;
+múltiplos itens;
+cálculo de lucro;
+cancelamento;
+baixa automática.
+Desperdícios
+
+Responsável por:
+
+registrar perdas;
+calcular prejuízo;
+histórico.
+Dashboard
+
+Exibe indicadores como:
+
+vendas do dia;
+vendas do mês;
+lucro;
+metas;
+produtos mais vendidos.
+Relatórios
+
+Gera relatórios em:
+
+PDF;
+Word;
+períodos personalizados.
+Organização das Camadas
+
+Cada camada tem um papel específico.
+
+Camada	Responsabilidade	Pode acessar
+Frontend	Interface do usuário	API
+Routes	Mapear URLs	Controllers
+Controllers	Receber requisições e responder	Services
+Services	Regras de negócio	Repositories
+Repositories	Acesso ao banco	PostgreSQL
+Database	Persistência	PostgreSQL
+
+Essa separação reduz o acoplamento e facilita a manutenção.
+
+Aplicando os Princípios SOLID
+S — Single Responsibility Principle
+
+Cada classe deve ter apenas uma responsabilidade.
+
+Exemplo:
+
+ProdutoService cuida apenas de produtos.
+VendaService cuida apenas de vendas.
+O — Open/Closed Principle
+
+O código deve estar aberto para extensão e fechado para modificação.
+
+Exemplo:
+
+Se adicionarmos um novo relatório, criamos um novo serviço sem alterar os existentes.
+
+L — Liskov Substitution Principle
+
+Classes derivadas devem poder substituir suas classes base sem alterar o comportamento esperado.
+
+Esse princípio será mais relevante caso futuramente utilizemos herança.
+
+I — Interface Segregation Principle
+
+Cada interface deve conter apenas métodos necessários.
+
+Exemplo:
+
+IProdutoRepository
+
+criar;
+atualizar;
+listar;
+excluir.
+
+Não faz sentido incluir métodos relacionados a vendas.
+
+D — Dependency Inversion Principle
+
+Camadas superiores dependem de abstrações, não de implementações concretas.
+
+Isso facilita testes e futuras mudanças de tecnologia.
+
+Aplicando Clean Code
+
+Durante todo o projeto seguiremos práticas como:
+
+nomes claros para variáveis, funções e arquivos;
+funções pequenas e com responsabilidade única;
+evitar duplicação de código (DRY);
+comentários apenas quando agregarem contexto;
+padronização de formatação;
+tratamento consistente de erros.
+Segurança na Arquitetura
+
+Desde o início, a arquitetura considerará:
+
+autenticação via JWT;
+senhas com bcrypt;
+validação de entrada de dados;
+isolamento dos dados por usuário (multi-tenant);
+proteção de rotas;
+uso de transações em operações críticas, como registro e cancelamento de vendas.
+Escalabilidade
+
+Mesmo sendo um TCC, a arquitetura permitirá adicionar novos módulos no futuro, por exemplo:
+
+emissão de notas fiscais;
+integração com maquininhas;
+importação/exportação de planilhas;
+aplicativo mobile;
+painel administrativo para múltiplas bancas.
+
+Essas funcionalidades poderão ser incorporadas sem reorganizar todo o projeto.
+
+Boas Práticas de Mercado
+
+O padrão escolhido é muito próximo do utilizado em empresas que desenvolvem APIs REST com Node.js e TypeScript:
+
+separação clara de responsabilidades;
+lógica de negócio isolada em Services;
+acesso ao banco por Repositories;
+autenticação centralizada;
+estrutura preparada para testes automatizados e manutenção.
+Resultado Esperado desta Etapa
+
+Ao final da definição da arquitetura, teremos:
+
+uma estrutura organizada e escalável;
+responsabilidades bem distribuídas entre as camadas;
+base sólida para iniciar a implementação;
+menor risco de retrabalho e maior facilidade de manutenção.
+
+
+--------------
+
+
+
+
+ETAPA 3 — Estrutura de Pastas do Backend
+
+Agora vamos organizar o projeto da mesma forma que uma empresa faria antes de começar a desenvolver.
+
+Esta etapa é extremamente importante, porque uma boa estrutura de pastas facilita:
+
+manutenção;
+localização de arquivos;
+trabalho em equipe;
+escalabilidade;
+testes;
+evolução do sistema.
+
+Objetivo desta etapa: definir uma estrutura profissional para o backend do Feira System, alinhada com Clean Architecture, MVC, Service Layer e Repository Pattern.
+
+Por que organizar bem as pastas?
+
+Imagine um sistema com:
+
+300 arquivos;
+50 mil linhas de código;
+20 módulos.
+
+Se tudo estiver na mesma pasta, encontrar um erro pode levar horas.
+
+Agora imagine que cada responsabilidade possui sua própria pasta. Em poucos segundos você sabe exatamente onde procurar.
+
+É exatamente isso que buscamos.
+
+Estrutura Geral do Backend
+
+A organização sugerida para o Feira System é a seguinte:
+
+backend/
+│
+├── src/
+│   ├── config/
+│   ├── controllers/
+│   ├── database/
+│   │   ├── migrations/
+│   │   ├── seeds/
+│   │   └── connection.ts
+│   │
+│   ├── middlewares/
+│   ├── models/
+│   ├── repositories/
+│   ├── routes/
+│   ├── services/
+│   ├── types/
+│   ├── utils/
+│   ├── validations/
+│   ├── constants/
+│   ├── errors/
+│   ├── app.ts
+│   └── server.ts
+│
+├── tests/
+│
+├── docs/
+│
+├── uploads/
+│
+├── .env
+├── .env.example
+├── .gitignore
+├── package.json
+├── tsconfig.json
+└── README.md
+
+Essa estrutura já é preparada para crescimento.
+
+A pasta src
+O que é?
+
+É a pasta principal do projeto.
+
+Todo o código-fonte da aplicação ficará dentro dela.
+
+Nunca colocaremos lógica do sistema fora da src.
+
+Por que existe?
+
+Para separar:
+
+código da aplicação;
+configurações do projeto;
+arquivos temporários;
+documentação.
+A pasta routes
+Objetivo
+
+Ela define as rotas da API.
+
+Exemplo:
+
+POST /auth/login
+
+GET /produtos
+
+POST /vendas
+
+Ela funciona como um mapa.
+
+Quando chega uma requisição, a rota decide qual controller será executado.
+
+O que contém?
+
+Exemplo:
+
+routes/
+
+auth.routes.ts
+
+produto.routes.ts
+
+venda.routes.ts
+
+desperdicio.routes.ts
+
+usuario.routes.ts
+
+index.ts
+Responsabilidade
+
+A rota não faz cálculos.
+
+Ela apenas conecta:
+
+URL
+
+↓
+
+Controller
+A pasta controllers
+Objetivo
+
+Receber as requisições HTTP.
+
+Exemplo:
+
+POST /login
+
+O Controller:
+
+recebe dados;
+chama o Service;
+devolve resposta.
+Exemplo de responsabilidade
+
+Entrada:
+
+email
+
+senha
+
+Saída:
+
+JWT
+
+Toda lógica fica no Service.
+
+Arquivos
+AuthController
+
+ProdutoController
+
+VendaController
+
+UsuarioController
+
+DashboardController
+
+RelatorioController
+
+DesperdicioController
+A pasta services
+Objetivo
+
+É o cérebro do sistema.
+
+Toda regra de negócio fica aqui.
+
+Exemplos
+
+Cadastrar produto.
+
+Registrar venda.
+
+Cancelar venda.
+
+Atualizar estoque.
+
+Calcular lucro.
+
+Gerar relatório.
+
+Exemplo
+
+Usuário vende:
+
+3 maçãs
+
+O Service:
+
+verifica estoque;
+calcula subtotal;
+calcula lucro;
+atualiza estoque;
+grava venda.
+
+Nenhuma dessas regras deve ficar no Controller.
+
+A pasta repositories
+Objetivo
+
+Conversar com o banco de dados.
+
+Ela faz:
+
+SELECT
+
+INSERT
+
+UPDATE
+
+DELETE
+Exemplo
+
+ProdutoRepository
+
+Possui métodos como:
+
+findById()
+
+findAll()
+
+create()
+
+update()
+
+delete()
+
+O Service não precisa saber SQL.
+
+Ele apenas chama o Repository.
+
+A pasta models
+Objetivo
+
+Representar as entidades do sistema.
+
+Não significa necessariamente usar ORM.
+
+Ela representa os objetos da aplicação.
+
+Exemplo
+
+Produto
+
+Possui:
+
+id
+
+nome
+
+precoVenda
+
+precoCusto
+
+quantidade
+Entidades
+Usuario
+
+Produto
+
+Venda
+
+ItemVenda
+
+Desperdicio
+A pasta database
+Objetivo
+
+Tudo relacionado ao banco.
+
+Contém
+connection.ts
+
+Responsável pela conexão com PostgreSQL.
+
+migrations
+
+Guarda todas as versões do banco.
+
+Cada alteração gera uma migration.
+
+Exemplo:
+
+CreateUsersTable
+
+CreateProductsTable
+
+CreateSalesTable
+seeds
+
+Dados iniciais.
+
+Exemplo:
+
+Categorias padrão.
+
+Usuário administrador para desenvolvimento.
+
+A pasta middlewares
+Objetivo
+
+Executar código antes do Controller.
+
+Exemplos
+
+Autenticação.
+
+Validação JWT.
+
+Permissões.
+
+Logs.
+
+Tratamento de erros.
+
+Fluxo:
+
+Usuário
+
+↓
+
+Middleware
+
+↓
+
+Controller
+A pasta config
+Objetivo
+
+Centralizar configurações.
+
+Exemplos
+
+JWT
+
+Variáveis de ambiente
+
+Email
+
+Upload
+
+Banco
+
+CORS
+
+Nunca espalhar configurações pelo projeto.
+
+A pasta utils
+Objetivo
+
+Funções reutilizáveis.
+
+Exemplos
+
+Formatar moeda.
+
+Formatar datas.
+
+Gerar códigos.
+
+Máscaras.
+
+Funções auxiliares.
+
+Essas funções não pertencem a nenhum módulo específico.
+
+A pasta types
+Objetivo
+
+Guardar tipos do TypeScript.
+
+Exemplo
+
+RequestUser
+
+JwtPayload
+
+ProdutoDTO
+
+VendaDTO
+
+Ajuda o TypeScript a entender os objetos.
+
+A pasta validations
+Objetivo
+
+Validar dados recebidos.
+
+Exemplo
+
+Cadastro de usuário.
+
+Verificar:
+
+email válido
+senha forte
+campos obrigatórios
+
+Isso evita dados incorretos chegando ao banco.
+
+A pasta constants
+Objetivo
+
+Guardar valores fixos.
+
+Exemplo:
+
+StatusVenda
+
+Categorias
+
+TiposPagamento
+
+Mensagens
+
+Evita repetir textos pelo sistema.
+
+A pasta errors
+Objetivo
+
+Centralizar erros personalizados.
+
+Exemplo:
+
+UnauthorizedError
+
+ValidationError
+
+NotFoundError
+
+ConflictError
+
+Isso torna o tratamento de erros padronizado e facilita a manutenção.
+
+O arquivo app.ts
+Objetivo
+
+Montar a aplicação.
+
+Aqui configuramos:
+
+Express;
+CORS;
+JSON;
+rotas;
+middlewares;
+tratamento global de erros.
+
+Ele não inicia o servidor.
+
+O arquivo server.ts
+Objetivo
+
+Inicializar a aplicação.
+
+Ele importa o app.ts e executa:
+
+Servidor iniciado
+
+↓
+
+Porta 3000
+
+Separar app.ts de server.ts facilita testes automatizados.
+
+A pasta tests
+
+Aqui ficarão os testes automatizados.
+
+Tipos de testes:
+
+unitários;
+integração;
+futuramente, ponta a ponta (end-to-end).
+
+Mesmo que o TCC não exija muitos testes, deixar essa estrutura pronta é uma boa prática.
+
+A pasta docs
+
+Armazena documentação técnica, como:
+
+diagrama de banco;
+arquitetura;
+manual da API;
+requisitos;
+casos de uso.
+
+Manter a documentação junto ao projeto facilita a consulta.
+
+A pasta uploads
+
+Reservada para arquivos enviados pelos usuários, por exemplo:
+
+foto do produto (caso essa funcionalidade seja adicionada);
+exportações temporárias.
+
+Atualmente pode permanecer vazia.
+
+Arquivos da Raiz
+.env
+
+Contém informações sensíveis:
+
+senha do banco;
+chave JWT;
+configuração de e-mail.
+
+Nunca deve ser enviado para o repositório.
+
+.env.example
+
+Modelo do .env, contendo apenas as chaves necessárias, sem valores reais.
+
+Ajuda outros desenvolvedores a configurar o projeto.
+
+package.json
+
+Define:
+
+dependências;
+scripts (dev, build, test);
+nome do projeto;
+versão.
+tsconfig.json
+
+Configuração do TypeScript.
+
+Controla aspectos como:
+
+versão do JavaScript gerado;
+aliases de caminhos;
+regras de compilação.
+README.md
+
+É a documentação inicial do projeto.
+
+Deve conter:
+
+descrição;
+tecnologias;
+instruções de instalação;
+comandos;
+estrutura;
+exemplos de uso.
+
+É a primeira coisa que outro desenvolvedor costuma ler.
+
+Como tudo se conecta
+
+O fluxo completo de uma requisição será:
+
+Frontend
+    │
+    ▼
+Routes
+    │
+    ▼
+Controllers
+    │
+    ▼
+Services
+    │
+    ▼
+Repositories
+    │
+    ▼
+PostgreSQL
+
+Cada camada possui uma única responsabilidade, seguindo os princípios do SOLID e reduzindo o acoplamento entre as partes do sistema.
+
+Erros comuns que evitaremos
+Colocar consultas SQL diretamente no Controller.
+Misturar regras de negócio com acesso ao banco.
+Criar funções muito grandes (centenas de linhas).
+Repetir código em vários módulos.
+Armazenar segredos diretamente no código.
+Não padronizar o tratamento de erros.
+Relação com o Mercado
+
+A estrutura proposta é compatível com o que é encontrado em muitos projetos profissionais em Node.js e TypeScript. Ela facilita:
+
+manutenção por equipes;
+crescimento do sistema;
+testes automatizados;
+substituição de tecnologias (como trocar o banco de dados ou adicionar novos módulos);
+integração contínua (CI/CD).
+Resultado Esperado desta Etapa
+
+Ao final da Etapa 3, teremos uma base organizacional sólida para iniciar a implementação do backend. Cada arquivo terá um propósito claro, reduzindo retrabalho e tornando o projeto mais fácil de entender e evoluir.
+
+
+------------------
+
+
+
+ETAPA 4 — Modelagem do Banco de Dados (PostgreSQL)
+
+Nesta etapa vamos projetar o banco de dados do Feira System. Um banco bem modelado evita inconsistências, melhora o desempenho e facilita a manutenção.
+
+Objetivo: criar um banco de dados relacional seguro, normalizado e preparado para suportar todas as regras de negócio do sistema.
+
+O que é Modelagem de Banco de Dados?
+
+A modelagem é o processo de transformar os requisitos do sistema em uma estrutura organizada de dados.
+
+Ela responde perguntas como:
+
+Quais informações precisam ser armazenadas?
+Como essas informações se relacionam?
+Como evitar duplicidade?
+Como garantir a integridade dos dados?
+
+Uma boa modelagem reduz erros e facilita consultas e relatórios.
+
+Por que escolhemos o PostgreSQL?
+
+O PostgreSQL é um banco de dados relacional muito utilizado no mercado por oferecer:
+
+alta confiabilidade;
+excelente desempenho;
+suporte a transações;
+integridade referencial;
+recursos avançados (índices, funções, JSON, etc.);
+código aberto e ampla documentação.
+
+Para um sistema financeiro e de estoque como o Feira System, ele é uma excelente escolha.
+
+Entidades Principais
+
+Com base nos requisitos, identificamos cinco entidades centrais:
+
+Usuário
+Produto
+Venda
+Item da Venda
+Desperdício
+
+Cada entidade representa um conceito importante do sistema.
+
+Diagrama Entidade-Relacionamento (DER)
+USUARIOS
+──────────────
+id (PK)
+nome
+email
+senha_hash
+nome_banca
+moeda
+meta_vendas
+meta_lucro
+modo_escuro
+created_at
+       │
+       │ 1:N
+       ▼
+PRODUTOS
+──────────────
+id (PK)
+usuario_id (FK)
+nome
+categoria
+tipo_venda
+preco_custo
+preco_venda
+quantidade
+ativo
+created_at
+       │
+       │
+       ├──────────────┐
+       │              │
+       ▼              ▼
+ITENS_VENDA     DESPERDICIOS
+       ▲              ▲
+       │              │
+       │              │
+VENDAS ───────────────┘
+──────────────
+id (PK)
+usuario_id (FK)
+total
+lucro_total
+forma_pagamento
+status
+created_at
+Relacionamentos
+Usuário → Produtos
+
+Tipo: 1:N
+
+Um usuário pode cadastrar vários produtos.
+
+Cada produto pertence a apenas um usuário.
+
+Exemplo:
+
+José
+
+Banana
+Maçã
+Tomate
+Usuário → Vendas
+
+Tipo: 1:N
+
+Cada venda pertence a um único usuário.
+
+Um usuário pode realizar milhares de vendas.
+
+Venda → Itens da Venda
+
+Tipo: 1:N
+
+Uma venda pode possuir vários produtos.
+
+Exemplo:
+
+Venda nº 15
+
+Banana
+Tomate
+Alface
+
+Todos pertencem à mesma venda.
+
+Produto → Itens da Venda
+
+Tipo: 1:N
+
+Um mesmo produto pode aparecer em diversas vendas.
+
+Produto → Desperdícios
+
+Tipo: 1:N
+
+Um produto pode ter vários registros de perda ao longo do tempo.
+
+Estrutura das Tabelas
+Tabela: usuarios
+
+Representa o proprietário da banca.
+
+Campo	Tipo	Obrigatório	Observação
+id	UUID	Sim	Chave primária
+nome	VARCHAR(150)	Sim	Nome do usuário
+email	VARCHAR(255)	Sim	Único
+senha_hash	TEXT	Sim	Senha criptografada
+nome_banca	VARCHAR(150)	Sim	Nome da banca
+moeda	VARCHAR(10)	Sim	Ex.: BRL
+meta_vendas	NUMERIC(12,2)	Não	Meta financeira
+meta_lucro	NUMERIC(12,2)	Não	Meta de lucro
+modo_escuro	BOOLEAN	Sim	Preferência do usuário
+created_at	TIMESTAMP	Sim	Data de criação
+Justificativa
+
+Os campos de metas e preferências pertencem ao usuário, pois são configurações individuais.
+
+Tabela: produtos
+
+Representa os itens vendidos.
+
+Campo	Tipo
+id	UUID
+usuario_id	UUID
+nome	VARCHAR(150)
+categoria	VARCHAR(100)
+tipo_venda	VARCHAR(50)
+preco_custo	NUMERIC(10,2)
+preco_venda	NUMERIC(10,2)
+quantidade	INTEGER
+ativo	BOOLEAN
+created_at	TIMESTAMP
+Justificativa
+preco_custo é necessário para calcular o lucro.
+ativo evita excluir produtos com histórico de vendas.
+usuario_id garante o isolamento dos dados (multi-tenant).
+Tabela: vendas
+
+Representa cada venda realizada.
+
+Campo	Tipo
+id	UUID
+usuario_id	UUID
+total	NUMERIC(12,2)
+lucro_total	NUMERIC(12,2)
+forma_pagamento	VARCHAR(50)
+status	VARCHAR(20)
+created_at	TIMESTAMP
+Justificativa
+
+O total e o lucro são armazenados para manter o histórico, mesmo que os preços dos produtos mudem futuramente.
+
+Tabela: itens_venda
+
+Tabela intermediária entre vendas e produtos.
+
+Campo	Tipo
+id	UUID
+venda_id	UUID
+produto_id	UUID
+quantidade	INTEGER
+preco_unitario	NUMERIC(10,2)
+custo_unitario	NUMERIC(10,2)
+subtotal	NUMERIC(12,2)
+lucro_item	NUMERIC(12,2)
+Por que ela existe?
+
+Uma venda pode conter vários produtos.
+
+Sem essa tabela seria impossível representar corretamente uma venda com múltiplos itens.
+
+Tabela: desperdicios
+
+Registra perdas de produtos.
+
+Campo	Tipo
+id	UUID
+usuario_id	UUID
+produto_id	UUID
+quantidade	INTEGER
+motivo	TEXT
+valor_perda	NUMERIC(12,2)
+data_registro	DATE
+created_at	TIMESTAMP
+Justificativa
+
+Separar desperdícios das vendas permite análises financeiras mais precisas e mantém o histórico de perdas.
+
+Chaves Primárias (Primary Keys)
+
+Todas as tabelas utilizarão UUID como chave primária.
+
+Por que UUID?
+dificulta adivinhação de IDs;
+facilita sincronização futura entre sistemas;
+evita conflitos em ambientes distribuídos.
+Chaves Estrangeiras (Foreign Keys)
+
+As chaves estrangeiras garantem a integridade referencial.
+
+Origem	Destino
+produtos.usuario_id	usuarios.id
+vendas.usuario_id	usuarios.id
+itens_venda.venda_id	vendas.id
+itens_venda.produto_id	produtos.id
+desperdicios.usuario_id	usuarios.id
+desperdicios.produto_id	produtos.id
+Índices
+
+Para melhorar o desempenho, criaremos índices nos campos mais consultados.
+
+Campo	Motivo
+usuarios.email	Login rápido
+produtos.usuario_id	Listagem por usuário
+vendas.usuario_id	Histórico de vendas
+vendas.created_at	Relatórios por período
+desperdicios.data_registro	Consultas por data
+
+Esses índices aceleram buscas sem alterar a lógica da aplicação.
+
+Normalização
+
+O banco será projetado até a Terceira Forma Normal (3FN).
+
+Primeira Forma Normal (1FN)
+
+Cada campo armazena apenas um valor.
+
+Exemplo correto:
+
+nome = "Banana"
+
+Exemplo incorreto:
+
+nome = "Banana, Maçã, Tomate"
+Segunda Forma Normal (2FN)
+
+Todos os atributos dependem da chave primária completa.
+
+Exemplo:
+
+Em itens_venda, o subtotal depende do item específico, e não apenas da venda.
+
+Terceira Forma Normal (3FN)
+
+Não haverá dependências transitivas.
+
+Exemplo:
+
+As configurações do usuário ficam em usuarios, e não repetidas em produtos ou vendas.
+
+Integridade Referencial
+
+O banco impedirá situações como:
+
+registrar uma venda para um usuário inexistente;
+criar um item de venda para um produto inexistente;
+registrar um desperdício sem produto associado.
+
+Isso aumenta a confiabilidade dos dados.
+
+Regras de Negócio Refletidas no Banco
+
+Algumas regras serão reforçadas tanto pela aplicação quanto pelo banco:
+
+estoque (quantidade) não pode ser negativo;
+preços devem ser maiores que zero;
+e-mail deve ser único;
+produto deve pertencer ao usuário autenticado;
+uma venda cancelada não deve ser contabilizada nos relatórios.
+Considerações sobre Exclusão de Dados
+
+Para preservar o histórico financeiro:
+
+Usuários: normalmente não serão excluídos, apenas desativados futuramente (caso essa funcionalidade seja adicionada).
+Produtos: não serão removidos fisicamente se já participaram de vendas; o campo ativo controlará sua disponibilidade.
+Vendas: não serão apagadas. Em caso de erro, serão marcadas como CANCELADA.
+Desperdícios: permanecem registrados para manter o histórico.
+
+Essa estratégia é chamada de soft delete ou desativação lógica (quando aplicável) e preserva a consistência dos relatórios.
+
+Preparação para as Migrations
+
+Como utilizaremos TypeScript, todas as tabelas serão criadas por migrations.
+
+Isso traz vantagens como:
+
+controle de versão do banco;
+facilidade para outros desenvolvedores criarem o ambiente;
+possibilidade de evoluir o esquema sem executar scripts manualmente.
+Boas Práticas Adicionais
+
+Além da modelagem básica, adotaremos algumas práticas profissionais:
+
+armazenar valores monetários em NUMERIC, evitando erros de precisão;
+utilizar TIMESTAMP para registros de auditoria;
+registrar datas de negócio (data_registro) separadamente da data de criação (created_at) quando fizer sentido;
+criar restrições (CHECK, UNIQUE, NOT NULL) para evitar dados inválidos.
+Resultado Esperado desta Etapa
+
+Ao concluir a modelagem do banco de dados, teremos:
+
+um esquema relacional consistente e normalizado;
+relacionamentos que refletem corretamente as regras de negócio;
+base sólida para implementar os repositórios e as migrations;
+estrutura preparada para consultas, relatórios e crescimento do sistema.
+
+
+------------------
+
+
+
+ETAPA 5 — Configuração do Ambiente (Node.js + TypeScript + Express)
+
+A partir desta etapa, começaremos a transformar todo o planejamento em um projeto funcional.
+
+Objetivo: criar uma base sólida, organizada e preparada para o desenvolvimento do Feira System. Antes de escrever funcionalidades como login ou cadastro de produtos, precisamos configurar corretamente o ambiente.
+
+Objetivos da Etapa
+
+Ao final desta etapa, teremos:
+
+Projeto Node.js criado
+TypeScript configurado
+Express configurado
+Estrutura de pastas criada
+Variáveis de ambiente configuradas
+Scripts de desenvolvimento
+ESLint e Prettier configurados
+Servidor funcionando
+Projeto preparado para iniciar a API
+Antes de começar: por que configurar tudo primeiro?
+
+Muitos iniciantes fazem o seguinte:
+
+Criam um arquivo index.js.
+Instalam apenas o Express.
+Começam a programar.
+
+No início parece mais rápido.
+
+Mas depois de alguns dias surgem problemas:
+
+código desorganizado;
+erros difíceis de encontrar;
+falta de padronização;
+dificuldade para trabalhar em equipe.
+
+Em empresas, a primeira preocupação é montar uma base consistente. É exatamente isso que faremos.
+
+Ferramentas que utilizaremos
+Ferramenta	Função
+Node.js	Ambiente de execução JavaScript
+TypeScript	Tipagem estática
+Express	Framework para API REST
+PostgreSQL	Banco de dados
+ts-node	Executar TypeScript sem compilar manualmente
+Nodemon	Reiniciar o servidor automaticamente
+dotenv	Gerenciar variáveis de ambiente
+bcrypt	Hash de senhas
+JWT	Autenticação
+ESLint	Encontrar problemas no código
+Prettier	Padronizar formatação
+Husky	Executar verificações antes dos commits
+Git	Controle de versão
+Por que TypeScript?
+
+O JavaScript é uma linguagem dinâmica.
+
+Isso significa que vários erros só aparecem quando o programa está em execução.
+
+Exemplo:
+
+let quantidade = "10";
+console.log(quantidade * 2);
+
+Em alguns casos funciona.
+
+Em outros pode gerar comportamentos inesperados.
+
+Com TypeScript:
+
+let quantidade: number = 10;
+
+O compilador identifica erros antes mesmo da aplicação ser executada.
+
+Vantagens
+autocompletar inteligente;
+menos bugs;
+melhor manutenção;
+código mais legível;
+amplamente utilizado no mercado.
+Por que Express?
+
+O Node.js fornece apenas recursos básicos.
+
+O Express adiciona:
+
+sistema de rotas;
+middlewares;
+tratamento de requisições;
+respostas HTTP;
+organização da API.
+
+Sem ele precisaríamos escrever centenas de linhas apenas para tratar requisições.
+
+Estrutura Inicial do Projeto
+
+Após a configuração, teremos algo semelhante a:
+
+backend/
+│
+├── src/
+│   ├── config/
+│   ├── controllers/
+│   ├── database/
+│   ├── middlewares/
+│   ├── models/
+│   ├── repositories/
+│   ├── routes/
+│   ├── services/
+│   ├── types/
+│   ├── utils/
+│   ├── validations/
+│   ├── constants/
+│   ├── errors/
+│   ├── app.ts
+│   └── server.ts
+│
+├── tests/
+├── docs/
+├── uploads/
+│
+├── .env
+├── .env.example
+├── .gitignore
+├── package.json
+├── tsconfig.json
+├── eslint.config.js
+├── .prettierrc
+└── README.md
+
+Essa estrutura será a base de todo o projeto.
+
+Variáveis de Ambiente
+O que são?
+
+São configurações que não devem ficar escritas diretamente no código.
+
+Exemplos:
+
+porta do servidor;
+senha do banco;
+chave JWT;
+configurações de e-mail.
+
+Em vez de escrever:
+
+JWT_SECRET = minhaSenhaSuperSecreta123
+
+no código, utilizamos um arquivo .env.
+
+Vantagens
+maior segurança;
+facilidade para mudar configurações;
+ambientes diferentes (desenvolvimento, teste e produção).
+Scripts do Projeto
+
+No package.json criaremos scripts como:
+
+dev → iniciar servidor em desenvolvimento;
+build → compilar TypeScript;
+start → executar versão compilada;
+lint → verificar qualidade do código;
+format → formatar arquivos;
+test → executar testes.
+
+Esses comandos padronizam o trabalho da equipe.
+
+ESLint
+O que é?
+
+É uma ferramenta que analisa o código.
+
+Ela encontra problemas como:
+
+variáveis não utilizadas;
+código duplicado;
+erros de sintaxe;
+más práticas.
+Exemplo
+
+Sem ESLint:
+
+Você pode deixar uma variável declarada e nunca utilizá-la.
+
+O sistema continua funcionando.
+
+Mas o código fica "sujo".
+
+O ESLint identifica isso automaticamente.
+
+Prettier
+O que faz?
+
+Formata automaticamente o código.
+
+Por exemplo:
+
+Antes:
+
+const soma=(a,b)=>{return a+b}
+
+Depois:
+
+const soma = (a, b) => {
+  return a + b;
+};
+
+Isso melhora a legibilidade e evita discussões sobre estilo de código.
+
+Husky
+O que é?
+
+Ferramenta que executa verificações antes de um commit no Git.
+
+Exemplo:
+
+Você tenta fazer um commit.
+
+O Husky:
+
+executa o ESLint;
+verifica a formatação;
+impede o commit se houver erros.
+
+Assim, apenas código de qualidade entra no repositório.
+
+Git
+
+Desde o início utilizaremos Git.
+
+Benefícios:
+
+histórico de alterações;
+trabalho em equipe;
+rollback de mudanças;
+integração com plataformas como GitHub.
+
+Uma boa prática é realizar commits pequenos e com mensagens descritivas.
+
+Fluxo da Aplicação
+
+Quando tudo estiver configurado, o funcionamento será:
+
+Navegador
+      │
+      ▼
+Express
+      │
+      ▼
+Routes
+      │
+      ▼
+Controllers
+      │
+      ▼
+Services
+      │
+      ▼
+Repositories
+      │
+      ▼
+PostgreSQL
+
+Essa estrutura já está preparada para crescer.
+
+Boas Práticas que adotaremos
+
+Durante todo o desenvolvimento seguiremos algumas regras:
+
+utilizar nomes claros para arquivos e funções;
+manter uma responsabilidade por classe ou módulo;
+evitar duplicação de código (DRY);
+centralizar configurações;
+documentar decisões importantes;
+validar dados antes de processá-los;
+tratar erros de forma padronizada.
+Erros comuns nesta fase
+
+Alguns problemas frequentes em projetos iniciantes:
+
+misturar arquivos JavaScript e TypeScript;
+armazenar segredos diretamente no código;
+não utilizar variáveis de ambiente;
+ignorar ferramentas de qualidade (ESLint/Prettier);
+iniciar a implementação sem definir a estrutura do projeto.
+
+Nossa configuração evitará esses problemas desde o início.
+
+Relação com o Mercado
+
+A configuração proposta é muito próxima da utilizada em equipes profissionais que desenvolvem APIs com Node.js e TypeScript. Ela facilita:
+
+integração contínua (CI/CD);
+revisão de código;
+testes automatizados;
+manutenção a longo prazo;
+entrada de novos desenvolvedores no projeto.
+Resultado Esperado desta Etapa
+
+Ao final da Etapa 5 teremos:
+
+ambiente de desenvolvimento configurado;
+ferramentas de qualidade integradas;
+servidor Express preparado;
+projeto organizado para receber os módulos do Feira System;
+base consistente para iniciar a implementação da API.
+Uma recomendação para o Feira System
+
+Como estamos construindo um sistema com objetivo de TCC e uso real, proponho uma pequena evolução em relação ao plano inicial:
+
+Utilizar Node.js + TypeScript + Express + PostgreSQL (como definido).
+Utilizar o driver pg em conjunto com um Repository Pattern próprio, em vez de um ORM pesado. Isso ajuda você a aprender SQL e deixa o projeto mais didático.
+Adicionar Docker (PostgreSQL e backend) para facilitar a execução em qualquer computador.
+Utilizar Swagger/OpenAPI para documentar automaticamente a API REST.
+Utilizar Jest e Supertest para testes unitários e de integração.
+Configurar GitHub Actions para executar lint e testes a cada push.
+
+Esses itens não complicam significativamente o projeto, mas aumentam bastante seu nível técnico perante uma banca de TCC e aproximam a arquitetura das práticas utilizadas no mercado.
+
+
+
+--------------
+
+
+
+ETAPA 6 — Configuração Completa do TypeScript
+
+Agora vamos preparar o ambiente para que o desenvolvimento do Feira System seja seguro, organizado e profissional.
+
+Objetivo: configurar o TypeScript para oferecer tipagem estática, organização de imports, compilação otimizada e uma experiência de desenvolvimento semelhante à encontrada em empresas.
+
+O que é o TypeScript?
+
+O TypeScript é um superconjunto do JavaScript.
+
+Isso significa que:
+
+Todo código JavaScript é um código TypeScript válido.
+O TypeScript adiciona recursos extras, principalmente tipagem estática.
+
+Na prática, ele ajuda a detectar erros antes da execução do sistema.
+
+Por que usamos TypeScript no Feira System?
+
+Nosso sistema terá:
+
+autenticação;
+banco de dados;
+cálculos financeiros;
+controle de estoque;
+geração de relatórios.
+
+Esses módulos manipulam muitos dados diferentes. A tipagem reduz erros e torna o código mais confiável.
+
+Exemplo:
+
+Sem TypeScript:
+
+let preco = "10.50";
+let quantidade = 5;
+
+let total = preco * quantidade;
+
+Pode funcionar, mas também pode gerar comportamentos inesperados em outras situações.
+
+Com TypeScript:
+
+let preco: number = 10.5;
+let quantidade: number = 5;
+
+const total = preco * quantidade;
+
+Se um valor incorreto for atribuído, o compilador avisará antes da aplicação rodar.
+
+Como o TypeScript funciona?
+
+O navegador e o Node.js executam JavaScript.
+
+O TypeScript precisa ser compilado.
+
+Fluxo:
+
+Código TypeScript (.ts)
+        │
+        ▼
+Compilador (tsc)
+        │
+        ▼
+Código JavaScript (.js)
+        │
+        ▼
+Node.js
+
+Durante o desenvolvimento, utilizaremos ferramentas como ts-node para executar arquivos .ts diretamente, mas em produção o projeto será compilado.
+
+Organização dos Arquivos
+
+Os arquivos principais serão:
+
+backend/
+│
+├── tsconfig.json
+├── package.json
+├── src/
+│   ├── app.ts
+│   ├── server.ts
+│   └── ...
+└── dist/
+src
+
+Contém o código-fonte.
+
+dist
+
+Recebe os arquivos JavaScript gerados pela compilação.
+
+Nunca editamos arquivos dentro de dist.
+
+O arquivo tsconfig.json
+
+É o arquivo responsável por configurar o compilador do TypeScript.
+
+Ele define, por exemplo:
+
+onde está o código-fonte;
+onde ficará o código compilado;
+qual versão do JavaScript será gerada;
+regras de tipagem;
+aliases de importação.
+Principais Configurações
+Diretório de origem
+src
+
+Informa ao compilador onde está o código.
+
+Diretório de saída
+dist
+
+Define onde o JavaScript será gerado.
+
+Modo Strict
+
+O modo strict torna a verificação de tipos muito mais rigorosa.
+
+Benefícios:
+
+menos bugs;
+maior segurança;
+melhor documentação do código.
+
+Para um projeto acadêmico e profissional, manteremos esse modo ativado.
+
+Remoção de Código Não Utilizado
+
+O compilador pode alertar sobre:
+
+variáveis não utilizadas;
+parâmetros não utilizados;
+imports desnecessários.
+
+Isso mantém o projeto limpo.
+
+Aliases de Importação
+O problema
+
+Sem aliases:
+
+../../../services/authService
+
+Conforme o projeto cresce, esses caminhos ficam difíceis de ler.
+
+A solução
+
+Criamos aliases como:
+
+@/services
+@/controllers
+@/repositories
+@/middlewares
+
+Assim, os imports ficam mais claros.
+
+Exemplo conceitual:
+
+@/services/AuthService
+
+Em vez de:
+
+../../../services/AuthService
+Benefícios dos Aliases
+imports menores;
+código mais legível;
+facilidade para reorganizar pastas;
+menos erros em caminhos relativos.
+ts-node
+
+Durante o desenvolvimento não queremos compilar o projeto manualmente a cada alteração.
+
+O ts-node permite executar arquivos TypeScript diretamente.
+
+Fluxo:
+
+Arquivo .ts
+     │
+     ▼
+ts-node
+     │
+     ▼
+Aplicação executada
+Nodemon
+
+Sempre que alterarmos um arquivo:
+
+Antes:
+
+Parar o servidor.
+Compilar.
+Executar novamente.
+
+Com o Nodemon:
+
+salva o arquivo;
+o servidor reinicia automaticamente.
+
+Isso aumenta muito a produtividade.
+
+Scripts do Projeto
+
+No package.json teremos scripts como:
+
+dev → desenvolvimento com reinicialização automática;
+build → compilar TypeScript;
+start → executar versão compilada;
+lint → verificar qualidade do código;
+format → formatar arquivos;
+test → executar testes.
+
+Padronizar esses comandos facilita o trabalho em equipe.
+
+Estrutura Inicial do Servidor
+
+Teremos dois arquivos principais.
+
+app.ts
+
+Responsável por configurar a aplicação.
+
+Exemplos:
+
+Express;
+CORS;
+middlewares;
+rotas;
+tratamento de erros.
+
+Ele não inicia o servidor.
+
+server.ts
+
+Responsável por:
+
+iniciar o servidor;
+definir a porta;
+exibir mensagens de inicialização.
+
+Separar esses papéis facilita testes e manutenção.
+
+Fluxo de Inicialização
+
+Quando executarmos o projeto:
+
+npm run dev
+        │
+        ▼
+server.ts
+        │
+        ▼
+app.ts
+        │
+        ▼
+Express
+        │
+        ▼
+Servidor disponível
+Tratamento de Tipos
+
+Uma vantagem importante do TypeScript é documentar os dados que circulam pela aplicação.
+
+Exemplos de tipos que teremos:
+
+Usuario
+Produto
+Venda
+ItemVenda
+Desperdicio
+JwtPayload
+RequestUser
+
+Isso torna o código mais previsível e facilita o uso do editor.
+
+Organização dos DTOs
+
+À medida que o projeto crescer, criaremos DTOs (Data Transfer Objects).
+
+Exemplos:
+
+CreateProdutoDTO
+UpdateProdutoDTO
+CreateVendaDTO
+LoginDTO
+
+Os DTOs definem exatamente quais dados entram e saem da aplicação.
+
+Tratamento de Erros
+
+Mesmo nesta fase inicial, adotaremos um padrão para erros.
+
+Em vez de mensagens diferentes em cada módulo, utilizaremos uma estrutura consistente para:
+
+erros de validação;
+autenticação;
+autorização;
+recursos não encontrados;
+conflitos.
+
+Isso facilita tanto o frontend quanto a manutenção da API.
+
+Boas Práticas
+
+Durante o desenvolvimento seguiremos regras como:
+
+uma classe por arquivo;
+nomes descritivos;
+evitar funções muito grandes;
+tipar parâmetros e retornos;
+reutilizar tipos sempre que possível;
+manter responsabilidades separadas.
+Erros Comuns
+
+Alguns problemas frequentes em projetos TypeScript:
+
+desativar o modo strict;
+usar any em excesso;
+misturar JavaScript e TypeScript sem necessidade;
+ignorar avisos do compilador;
+criar aliases inconsistentes.
+
+Nossa configuração evitará esses problemas desde o início.
+
+Relação com o Mercado
+
+A configuração proposta é muito próxima da utilizada em equipes que desenvolvem APIs profissionais com Node.js e TypeScript.
+
+Ela facilita:
+
+manutenção do código;
+integração com ferramentas de qualidade;
+testes automatizados;
+crescimento do projeto;
+onboarding de novos desenvolvedores.
+Evolução do Projeto
+
+Até aqui concluímos:
+
+✅ Etapa 1 — Levantamento de Requisitos
+✅ Etapa 2 — Arquitetura do Sistema
+✅ Etapa 3 — Estrutura de Pastas
+✅ Etapa 4 — Modelagem do Banco de Dados
+✅ Etapa 5 — Configuração do Ambiente
+✅ Etapa 6 — Configuração do TypeScript
+
+Com essas etapas, toda a base conceitual e estrutural do backend está definida.
+
+O que muda a partir da próxima etapa?
+
+Até agora trabalhamos na fase de planejamento e preparação.
+
+A partir da próxima etapa, iniciaremos a implementação real do backend.
+
+Isso significa que passaremos a criar:
+
+arquivos reais;
+código completo;
+comentários explicando cada parte;
+conexão com o PostgreSQL;
+rotas;
+autenticação;
+regras de negócio.
+
+Cada módulo será desenvolvido de forma incremental, seguindo exatamente a arquitetura definida.
